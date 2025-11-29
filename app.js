@@ -1,14 +1,15 @@
 import Store from "/services/Store.js";
 import API from "/services/API.js";
-import { loadData } from "./services/Menu";
-import Router from "./services/Router";
+import { loadData } from "./services/Menu.js";
+import Router from "./services/Router.js";
 
-window.app = {};
-app.store = Store;
-app.router = Router;
+window.app = {}; // Global app object
+app.store = Store; // Global store
+app.router = Router; // Global router
 
 window.addEventListener("DOMContentLoaded", async () => {
-  loadData();
+  loadData(); // Load menu data when DOM is fully loaded
+  app.router.init(); // Initialize the router after DOM is loaded
 });
 
 // const $ = function (args) {
