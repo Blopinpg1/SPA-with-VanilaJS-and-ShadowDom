@@ -1,9 +1,11 @@
 import Store from "/services/Store.js";
 import API from "/services/API.js";
 import { loadData } from "./services/Menu";
+import Router from "./services/Router";
 
 window.app = {};
 app.store = Store;
+app.router = Router;
 
 window.addEventListener("DOMContentLoaded", async () => {
   loadData();
