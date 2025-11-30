@@ -3,6 +3,11 @@ import API from "/services/API.js";
 import { loadData } from "./services/Menu.js";
 import Router from "./services/Router.js";
 
+//link my web components
+import { MenuPage } from "./components/Menupage.js";
+import { DetailsPage } from "./components/DetailsPage.js";
+import { OrderPage } from "./components/OrderPage.js";
+
 window.app = {}; // Global app object
 app.store = Store; // Global store
 app.router = Router; // Global router
