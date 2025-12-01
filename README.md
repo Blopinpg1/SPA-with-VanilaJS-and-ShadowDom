@@ -165,8 +165,6 @@ Handling global state in a simple app
 
 Custom routing & event-driven rendering
 
-📸 Screenshots (Add Yours)
-Add images like:
-![Menu Page](./images/menu.png)
+📸 Screenshots
+![Menu Page](./images/menu.jpg)
 ![Cart Page](./images/cart.png)
-![Order Form](./images/order.png)
