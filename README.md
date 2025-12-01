@@ -73,30 +73,31 @@ Works offline when fully configured
 📁 Project Structure
 /
 ├── index.html # Entry point of the SPA
-├── app.js # Main app controller, router, state
+├── app.js # Main app controller, router, and state management
 │
-├── /components # Web Components (UI + Shadow DOM)
-│ ├── MenuPage.js
+├── components/ # Web Components (UI + Shadow DOM)
+│ ├── MenuPage.js  
 │ ├── ProductDetails.js
 │ ├── OrderPage.js
 │ ├── CartItem.js
-│ └── ...
+│ └── ... # Additional components
 │
-├── /services # Business logic and utilities
+├── services/ # Business logic and utilities
 │ ├── Menu.js # Product data fetching
-│ ├── Order.js # Cart actions
-│ └── ...
+│ ├── Order.js # Cart actions (add/remove)
+│ └── ... # More service modules
 │
-├── /data # Mock data / JSON
+├── data/ # Static or mock data
 │ └── menu.json
 │
-├── /images # Project images
+├── images/ # Image assets
 │
-├── /css or component CSS # Component-specific Shadow DOM styles
+├── css/ # (Optional) Component-specific or global CSS
+│ └── ... # Shadow DOM styles stored per component
 │
 ├── serviceworker.js # Optional PWA features
-├── app.webmanifest # PWA manifest
-└── README.md
+├── app.webmanifest # Web App Manifest (PWA metadata)
+└── README.md # Project documentation
 
 🛠 Installation & Setup
 ▶️ Run locally
