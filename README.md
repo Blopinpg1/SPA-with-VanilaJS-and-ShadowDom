@@ -167,4 +167,4 @@ Custom routing & event-driven rendering
 
 📸 Screenshots
 ![Menu Page](./images/menu.jpg)
-![Cart Page](./images/cart.png)
+![Cart Page](./images/cart.jpg)
