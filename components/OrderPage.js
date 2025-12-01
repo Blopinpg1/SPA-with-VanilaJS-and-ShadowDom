@@ -28,6 +28,7 @@ export class OrderPage extends HTMLElement {
   }
 
   render() {
+    this.setFromBinding(document.querySelector("form"));
     let section = this.root.querySelector("section");
     if (app.store.cart.length == 0) {
       section.innerHTML = `
@@ -60,6 +61,21 @@ export class OrderPage extends HTMLElement {
             </li>                
         `;
     }
+  }
+  setFromBinding(form) {
+    //set double data binding
+    this.#user = new Proxy(this.#user, {
+      set(target, property, value) {
+        target[property] = value;
+        form.elements[property].value = value;
+        return true;
+      },
+    });
+    Array.from(form.elements).forEach((element) => {
+      element.addEventListener("change", (event) => {
+        this.#user[element].name = element.value;
+      });
+    });
   }
 }
 customElements.define("order-page", OrderPage); //we can also put this in app.js  for rendering instead of importing
