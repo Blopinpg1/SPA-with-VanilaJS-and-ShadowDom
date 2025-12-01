@@ -14,5 +14,5 @@ export async function addToCart(id) {
   }
 }
 export function removeFromCart(id) {
-  const product = app.store.cart.filter((p) => p.product.id != id);
+  app.store.cart = app.store.cart.filter((p) => p.product.id != id);
 }

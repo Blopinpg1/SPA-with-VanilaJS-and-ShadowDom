@@ -28,7 +28,6 @@ export class OrderPage extends HTMLElement {
   }
 
   render() {
-    this.setFromBinding(document.querySelector("form"));
     let section = this.root.querySelector("section");
     if (app.store.cart.length == 0) {
       section.innerHTML = `
@@ -61,8 +60,17 @@ export class OrderPage extends HTMLElement {
             </li>                
         `;
     }
+    this.setFromBinding(this.root.querySelector("form"));
   }
   setFromBinding(form) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      alert(`Thank you for your order ${this.#user.name}.`);
+      this.#user.name = "";
+      this.#user.email = "";
+      this.#user.phone = "";
+      //TODO : send data to the server
+    });
     //set double data binding
     this.#user = new Proxy(this.#user, {
       set(target, property, value) {
@@ -73,7 +81,7 @@ export class OrderPage extends HTMLElement {
     });
     Array.from(form.elements).forEach((element) => {
       element.addEventListener("change", (event) => {
-        this.#user[element].name = element.value;
+        this.#user[element.name] = element.value;
       });
     });
   }

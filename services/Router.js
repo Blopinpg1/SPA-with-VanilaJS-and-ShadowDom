@@ -45,6 +45,8 @@ const Router = {
       cache.appendChild(pageElement);
       window.scrollX = 0;
       window.scrollY = 0;
+    } else {
+      document.querySelector("main").innerHTML = "OPPS! 404";
     }
   },
 };
