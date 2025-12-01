@@ -70,13 +70,14 @@ Includes web manifest
 
 Works offline when fully configured
 
-📁 Project Structure
+## 📁 Project Structure
+
 /
 ├── index.html # Entry point of the SPA
 ├── app.js # Main app controller, router, and state management
 │
 ├── components/ # Web Components (UI + Shadow DOM)
-│ ├── MenuPage.js  
+│ ├── MenuPage.js
 │ ├── ProductDetails.js
 │ ├── OrderPage.js
 │ ├── CartItem.js
@@ -92,7 +93,7 @@ Works offline when fully configured
 │
 ├── images/ # Image assets
 │
-├── css/ # (Optional) Component-specific or global CSS
+├── css/ # Component-specific or global CSS files
 │ └── ... # Shadow DOM styles stored per component
 │
 ├── serviceworker.js # Optional PWA features
